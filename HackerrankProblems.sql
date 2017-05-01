@@ -18,4 +18,12 @@ SELECT CASE WHEN A + B > C AND A+C>B AND B+C>A THEN
 END FROM TRIANGLES;
 
 
+/*
+https://www.hackerrank.com/challenges/the-pads
 
+
+*/
+select concat(name,concat(concat('(',substr(Occupation, 1,1)),')')) from OCCUPATIONS  order by name;
+
+select concat(concat(concat(concat('There are total ',count(occupation)),' '),lower(occupation)),'s.') 
+as total from occupations group by occupation order by total;
